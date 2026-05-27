@@ -5,6 +5,12 @@ Day-1:
 - Create React App
 - Configured TailwindCSS
 
+Day-2:
+
+- Header
+- Login Form
+- Sign Up Form
+
 # Features
 
 - Login/SignUp
