@@ -7,9 +7,31 @@ Day-1:
 
 Day-2:
 
+- Routing of App
 - Header
 - Login Form
+
+Day-3:
+
 - Sign Up Form
+- Form Validation
+- useRef Hook
+
+Day-4:
+
+- Firebase Setup
+- Deploying app to production
+- Create SignUp User account
+
+Day-5:
+
+- Implement Sign In User API
+
+Day-6:
+
+- Created Redux Store with userSlice
+- Update Profile
+- Implemented Signout
 
 # Features
 
