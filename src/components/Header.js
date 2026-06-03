@@ -1,14 +1,15 @@
-import React from "react";
-import { signOut } from "firebase/auth";
+import React, { useEffect } from "react";
+import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../utils/firebase";
 import { useNavigate } from "react-router";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { addUser, removeUser } from "../utils/userSlice";
 
 const Header = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const user = useSelector((store) => store.user);
-  console.log("user:", user);
   const handleSignOut = () => {
     signOut(auth)
       .then(() => {
@@ -18,8 +19,25 @@ const Header = () => {
         navigate("/error");
       });
   };
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        const { uid, email, displayName, photoURL } = user;
+        dispatch(addUser({ uid, email, displayName, photoURL }));
+        navigate("/browse");
+      } else {
+        dispatch(removeUser());
+        navigate("/");
+      }
+    });
+
+    // cleanup calls when component unmounts
+    return () => unsubscribe();
+  }, []);
+
   return (
-    <div className="w-full h-[25%] absolute z-10 bg-gradient-to-b from-black flex justify-between">
+    <div className="w-full h-[25%] absolute top-0 z-10 bg-gradient-to-b from-black flex justify-between">
       <svg
         viewBox="0 0 111 30"
         version="1.1"
@@ -36,9 +54,9 @@ const Header = () => {
 
       {user && (
         <div className="mr-16 mt-9 flex gap-2">
-          <p className="text-lg text-white font-bold">{user.displayName}</p>
+          <img className="w-8 h-8" alt="usericon" src={user?.photoURL} />
           <button
-            className="text-white font-bold h-fit bg-red-600 px-2 py-1 rounded-lg"
+            className="text-white font-semibold h-fit bg-red-600 px-2 py-1 rounded-lg"
             onClick={handleSignOut}
           >
             Sign Out

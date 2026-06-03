@@ -5,12 +5,12 @@ import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
 
 import Browse from "./components/Browse";
-import Body from "./components/Body";
+import Login from "./components/Login";
 
 const appRouter = createBrowserRouter([
   {
     path: "/",
-    element: <Body />,
+    element: <Login />,
   },
   {
     path: "/browse",
