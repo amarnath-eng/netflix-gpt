@@ -4,7 +4,7 @@ import { FaPlay, FaInfoCircle } from "react-icons/fa";
 const VideoTitle = (props) => {
   const { title, overview } = props;
   return (
-    <div className="w-screen aspect-video pt-60 pl-12 text-white absolute bg-gradient-to-r from-black">
+    <div className="w-full aspect-video pt-60 pl-12 text-white absolute bg-gradient-to-r from-black">
       <h1 className="font-bold text-4xl">{title}</h1>
       <p className="mt-4 w-[40%]">{overview}</p>
       <div className="mt-4 flex gap-2">

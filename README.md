@@ -57,6 +57,18 @@ Day - 9:
 - Embedded the Youtube Video and Make it autoplay and mute
 - Tailwind classes to make main container look awesome.
 
+Day - 10 & 11:
+
+- Build Secondary Component
+- Build Movie List
+- Build Movie Card
+- TMDB Image CDN Url
+
+Day - 12 & 13:
+
+- Made the Browswe Page amazing with Tailwind css
+- usePopularMovies, useTopRatedMovies, useUpcomingMovies CustomHooks
+
 # Features
 
 - Login/SignUp

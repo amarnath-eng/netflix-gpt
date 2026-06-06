@@ -21,7 +21,7 @@ const appRouter = createBrowserRouter([
 function App() {
   return (
     <Provider store={appStore}>
-      <RouterProvider router={appRouter} />;
+      <RouterProvider router={appRouter} />
     </Provider>
   );
 }
