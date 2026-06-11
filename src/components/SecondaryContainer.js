@@ -8,7 +8,7 @@ const SecondaryContainer = () => {
   if (!nowPlayingMovies) return;
 
   return (
-    <div className="relative py-6 -mt-72 z-10">
+    <div className="relative py-6 md:-mt-72 z-10">
       <MovieList title={"Now Playing"} movies={nowPlayingMovies} />
       <MovieList title={"Popular"} movies={popularMovies} />
       <MovieList title={"Top Rated"} movies={topRatedMovies} />

@@ -69,6 +69,22 @@ Day - 12 & 13:
 - Made the Browswe Page amazing with Tailwind css
 - usePopularMovies, useTopRatedMovies, useUpcomingMovies CustomHooks
 
+Day - 14:
+
+- GPT Search Features
+- GPT Search Page
+- GPT Search Bar
+
+Day - 15,16,18:
+
+- Get Gemini API Key
+- GPT Search API Call
+- Fetched GPT Movie Suggestion from TMDB
+- Created GPT Slice & Added Data
+- Reused Movie List Component to make movie suggestion container
+- Added .env file
+- Made our pages responsive
+
 # Features
 
 - Login/SignUp

@@ -9,7 +9,7 @@ import {
 import { auth } from "../utils/firebase";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
-import { USER_AVATAR } from "../utils/constant";
+import { BG_IMAGE_URL, USER_AVATAR } from "../utils/constant";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
@@ -90,16 +90,15 @@ const Login = () => {
       <Header />
       <div className="relative">
         <img
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/435e8bb8-7f1b-49cb-8da8-bff997124294/web/IN-en-20260511-TRIFECTA-perspective_ec39852e-0b48-4e8a-b415-dd8376cd83ce_large.jpg"
-          srcSet="https://assets.nflxext.com/ffe/siteui/vlv3/435e8bb8-7f1b-49cb-8da8-bff997124294/web/IN-en-20260511-TRIFECTA-perspective_ec39852e-0b48-4e8a-b415-dd8376cd83ce_large.jpg 2000w, https://assets.nflxext.com/ffe/siteui/vlv3/435e8bb8-7f1b-49cb-8da8-bff997124294/web/IN-en-20260511-TRIFECTA-perspective_ec39852e-0b48-4e8a-b415-dd8376cd83ce_medium.jpg 1279w, https://assets.nflxext.com/ffe/siteui/vlv3/435e8bb8-7f1b-49cb-8da8-bff997124294/web/IN-en-20260511-TRIFECTA-perspective_ec39852e-0b48-4e8a-b415-dd8376cd83ce_small.jpg 959w"
+          src={BG_IMAGE_URL}
           alt=""
           aria-hidden="true"
           className="h-[100vh] w-full object-cover object-center"
         />
-        <div className="absolute top-0 h-full w-full flex justify-center items-center">
+        <div className="absolute top-0 mt-[40%] md:mt-0 md:h-full w-full flex justify-center md:items-center">
           <form
             onSubmit={(e) => e.preventDefault()}
-            className="w-3/12 flex flex-col bg-black bg-opacity-90 text-white p-6 rounded-lg"
+            className="md:w-3/12 w-[90%] flex flex-col bg-black bg-opacity-90 text-white p-6 rounded-lg"
           >
             <h1 className="font-bold text-3xl mb-6">
               {isSignInForm ? "Sign In" : "Sign Up"}
