@@ -83,7 +83,7 @@ Day - 15:
 - Created GPT Slice & Added Data
 - Reused Movie List Component to make movie suggestion container
 - Added .env file
-- Made our pages responsive
+- Made pages responsive
 
 # Features
 
