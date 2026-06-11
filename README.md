@@ -75,7 +75,7 @@ Day - 14:
 - GPT Search Page
 - GPT Search Bar
 
-Day - 15,16,18:
+Day - 15:
 
 - Get Gemini API Key
 - GPT Search API Call

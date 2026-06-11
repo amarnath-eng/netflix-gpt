@@ -71,9 +71,16 @@ const GPTSearchBar = () => {
       );
     } catch (error) {
       console.error(error);
-      setError(
-        "Something went wrong while fetching recommendations. Please try again.",
-      );
+
+      if (error?.status === 503) {
+        setError(
+          "Our recommendation service is experiencing high demand. Please try again in a few moments.",
+        );
+      } else {
+        setError(
+          "Something went wrong while fetching recommendations. Please try again.",
+        );
+      }
     } finally {
       setLoading(false);
     }
